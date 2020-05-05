@@ -6,25 +6,25 @@ import { AuthContext } from './src/utils';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import AsyncStorage from '@react-native-community/async-storage';
 
-const HomeStack = createStackNavigator();
+const StackHome = createStackNavigator();
 
 function HomeStack() {
   return (
-    <HomeStack.Navigator initialRouteName="Home">
-      <HomeStack.Screen name="Home" component={HomeScreen} />
-      <HomeStack.Screen name="Detail" component={DetailScreen} />
-    </HomeStack.Navigator>
+    <StackHome.Navigator initialRouteName="Main">
+      <StackHome.Screen name="Main" component={HomeScreen} />
+      <StackHome.Screen name="Detail" component={DetailScreen} />
+    </StackHome.Navigator>
   );
 }
 
-const SettingsStack = createStackNavigator();
+const StackSettings = createStackNavigator();
 
 function SettingsStack() {
   return (
-    <SettingsStack.Navigator initialRouteName="Settings">
-      <SettingsStack.Screen name="Settings" component={SettingsScreen} />
-      <SettingsStack.Screen name="Detail" component={DetailScreen} />
-    </SettingsStack.Navigator>
+    <StackSettings.Navigator initialRouteName="Settings">
+      <StackSettings.Screen name="Settings" component={SettingsScreen} />
+      <StackSettings.Screen name="Detail" component={DetailScreen} />
+    </StackSettings.Navigator>
   );
 }
 
